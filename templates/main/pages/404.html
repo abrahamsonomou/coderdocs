@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+
+<head>
+
+  {% include 'main/includes/_meta.html' %}
+
+<!-- Page Title -->
+<title>StudyPro - Education & Courses HTML5 Template</title>
+
+<!-- Favicon and Touch Icons -->
+<link href="{% static 'assets-pro/images/favicon.png' %} " rel="shortcut icon" type="image/png">
+<link href="{% static 'assets-pro/images/apple-touch-icon.png' %} " rel="apple-touch-icon">
+<link href="{% static 'assets-pro/images/apple-touch-icon-72x72.png' %} " rel="apple-touch-icon" sizes="72x72">
+<link href="{% static 'assets-pro/images/apple-touch-icon-114x114.png' %} " rel="apple-touch-icon" sizes="114x114">
+<link href="{% static 'assets-pro/images/apple-touch-icon-144x144.png' %} " rel="apple-touch-icon" sizes="144x144">
+
+<!-- Stylesheet -->
+<link href="{% static 'assets-pro/css/bootstrap.min.css' %} " rel="stylesheet" type="text/css">
+<link href="{% static 'assets-pro/css/jquery-ui.min.css' %} " rel="stylesheet" type="text/css">
+<link href="{% static 'assets-pro/css/animate.css' %} " rel="stylesheet" type="text/css">
+<link href="{% static 'assets-pro/css/css-plugin-collections.css' %} " rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="{% static 'assets-pro/css/menuzord-skins/menuzord-rounded-boxed.css' %} " rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="{% static 'assets-pro/css/style-main.css' %} " rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="{% static 'assets-pro/css/preloader.css' %} " rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="{% static 'assets-pro/css/custom-bootstrap-margin-padding.css' %} " rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="{% static 'assets-pro/css/responsive.css' %} " rel="stylesheet" type="text/css">
+{% comment %} <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+<!-- <link href="{% static 'assets-pro/css/style.css' %} " rel="stylesheet" type="text/css"> -->
+
+<!-- CSS | Theme Color --> {% endcomment %}
+<link href="{% static 'assets-pro/css/colors/theme-skin-color-set1.css' %} " rel="stylesheet" type="text/css">
+
+
+</head>
+<body class="">
+<div id="wrapper" class="clearfix">
+  <!-- preloader -->
+  <div id="preloader">
+    <div id="spinner">
+      <div class="preloader-dot-loading">
+        <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+  </div>
+  
+  <!-- Start main-content -->
+  <div class="main-content">
+     
+    <!-- Section: home -->
+    <section id="home" class="divider fullscreen bg-lightest">
+      <div class="display-table text-center">
+        <div class="display-table-cell">
+          <div class="container pt-0 pb-0">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h1 class="font-150 text-theme-colored2 mt-0 mb-0"><i class="fa fa-map-signs text-theme-colored"></i>404!</h1>
+                <h2 class="mt-0">Oops! Page Not Found</h2>
+                <p>The page you were looking for could not be found.</p>
+                <a class="btn btn-border btn-theme-colored2 btn-transparent btn-circled" href="{% url 'index' %}">Return Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+
+  <!-- Footer -->
+  <footer id="footer" class="footer text-center" data-bg-color="#2b2d3b">
+    <div class="container pt-15 pb-15">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-white mb-0"><a target="_blank" href="https://www.sonomou.tech">SONOMOU.TECH</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- end wrapper -->
+
+<!-- Footer Scripts -->
+<!-- JS | Custom script for all pages -->
+<script src="{% static 'assets-pro/js/jquery-2.2.4.min.js' %} "></script>
+<script src="{% static 'assets-pro/js/jquery-ui.min.js' %} "></script>
+<script src="{% static 'assets-pro/js/bootstrap.min.js' %} "></script>
+<!-- JS | jquery plugin collection for this theme -->
+<script src="{% static 'assets-pro/js/jquery-plugin-collection.js' %} "></script>
+<!-- JS | Custom script for all pages -->
+<script src="{% static 'assets-pro/js/custom.js' %} "></script>
+<script src="{% static 'assets-pro/js/extra.js' %} "></script>
+
+</body>
+
+
+</html>

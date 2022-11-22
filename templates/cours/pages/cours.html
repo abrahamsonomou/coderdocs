@@ -1,0 +1,49 @@
+{% extends 'cours/includes/_base.html' %}
+{% block title %}{{categorie.title}}{% endblock title %}
+{% block content %}    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+                {% for subcategorie in subcategories %}
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas {{subcategorie.icone}}"></i></span>{{subcategorie.title}}</a></li>
+				    {% for lecon in lecons %}
+                    {% if lecon.categorie == subcategorie%}
+                    <li class="nav-item"><a class="nav-link scrollto" href="#{{lecon.pk}}">{{lecon.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">{{categorie.title}}<span class="docs-time">Last updated: {{categorie.updated}}</span></h1>
+					    <section class="docs-intro">
+						    <p>{{categorie.description}}</p>
+						</section><!--//docs-intro-->
+				    </header>
+                    {% for lecon in lecons %}
+                    {% if lecon.categorie.categorie == categorie%}
+					<section class="docs-section" id="{{lecon.pk}}">
+						<h2 class="section-heading">{{lecon.title}}</h2>
+						<p>{{ lecon.contenu.html|safe}}</p>
+					</section><!--//section-->
+                    {% endif %}
+                    {% endfor %}
+					
+			    </article>
+			    
+	{% include 'main/includes/_footer.html' %}
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+	{% endblock content %}    

@@ -1,0 +1,33 @@
+{% extends 'main/includes/_baseCours.html' %}
+{% block title %}Recherche | Devenir developpeur Python/Djnago{% endblock title %}
+{% block content %}
+   <div class="page-content">
+	    <div class="container">
+		    <div class="docs-overview py-5">
+			    <div class="row justify-content-center">
+                    {% if categories|length %}
+                    {% for categorie in categories %}
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas {{categorie.icone}}"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">{{categorie.title|truncatechars:30}}</span>
+							    </h5>
+							    <div class="card-text">
+								    {{categorie.description}}
+							    </div>
+							    <a class="card-link-mask" href="{% url 'detail_cours' categorie.pk %}"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+                    {% endfor %}
+                    {% endif %}
+			    </div><!--//row-->
+		    </div><!--//container-->
+		</div><!--//container-->
+    </div><!--//page-content-->
+    
+{% endblock content %}

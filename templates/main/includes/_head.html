@@ -1,0 +1,20 @@
+{% load static %}
+
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+      
+{% include 'main/includes/_meta.html' %}
+
+      
+      <link rel="shortcut icon" href="{% static 'assets-cours/favicon.ico' %}"> 
+      
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+      
+      <!-- FontAwesome JS-->
+      <script defer src="{% static 'assets-cours/fontawesome/js/all.min.js' %} "></script>
+  
+      <!-- Theme CSS -->  
+      <link id="theme-style" rel="stylesheet" href="{% static 'assets-cours/css/theme.css' %} ">
+  
+  </head> 
